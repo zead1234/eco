@@ -15,12 +15,12 @@ import {
 function App() {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/product");
+    navigate("/Home");
   }, []);
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/Home" element={<Home />} />
       <Route path="/product" element={<Products />} />
       <Route path="/product/:id" element={<Product />} />
       <Route path="/about" element={<AboutPage />} />
@@ -29,7 +29,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/checkout" element={<Checkout />} />
-      {/* <Route path="*" element={<PageNotFound />} /> */}
+      <Route path="*" element={<PageNotFound />} />
       <Route path="/product/*" element={<PageNotFound />} />
     </Routes>
   );
