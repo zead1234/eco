@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import {
   Home,
   Product,
@@ -13,6 +13,11 @@ import {
   PageNotFound,
 } from "./pages";
 function App() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/product");
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
