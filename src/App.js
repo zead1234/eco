@@ -24,7 +24,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/checkout" element={<Checkout />} />
-      <Route path="*" element={<PageNotFound />} />
+      {/* <Route path="*" element={<PageNotFound />} /> */}
       <Route path="/product/*" element={<PageNotFound />} />
     </Routes>
   );
